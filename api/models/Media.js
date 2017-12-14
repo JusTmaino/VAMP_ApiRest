@@ -9,7 +9,10 @@ module.exports = {
 
   attributes: {
     url: {
-      type: 'string'
+      type: 'string',
+	  required: true,
+	  unique: true
+	  
     },
 
     // One-to-Many

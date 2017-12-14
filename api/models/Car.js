@@ -10,7 +10,8 @@ module.exports = {
   attributes: {
     
     registerNumber: {
-      type: 'string'
+      type: 'string',
+	  unique: true
     },
     brand: {
       type: 'string'
