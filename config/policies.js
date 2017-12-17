@@ -48,4 +48,13 @@ module.exports.policies = {
 		// before letting any users feed our rabbits
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
+	
+	 UserController: {
+     'login': true,
+     'create': ['isLoggedOut'],
+     '*': ['isLoggedIn']
+	 },
+	 CarController: {
+		 '*': ['isLoggedIn']
+	 },
 };

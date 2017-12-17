@@ -34,8 +34,8 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
-
+  },
+  'GET /user/identity': 'UserController.userIdentity'
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
