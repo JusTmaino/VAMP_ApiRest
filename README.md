@@ -21,5 +21,7 @@ Lancer une instance de la base :
     sails lift
     
 #### Tests et documentation de l'API
-    https://khadidjahamza.docs.apiary.io/#reference
+
+Realisée avec l'api Apiary
+Le lien : https://khadidjahamza.docs.apiary.io/#
     
