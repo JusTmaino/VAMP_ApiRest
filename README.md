@@ -13,12 +13,13 @@ Lancer une instance de la base :
 ### Initialisation du projet
 
 #### Installation des modules
-
+    
     sudo npm -g install sails
     sudo npm install sails-mongo
     
 #### Lancement de l'API
     sails lift
     
-
+#### Tests et documentation de l'API
+    https://khadidjahamza.docs.apiary.io/#reference
     
