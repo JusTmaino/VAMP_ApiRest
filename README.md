@@ -16,6 +16,8 @@ Lancer une instance de la base :
     
     sudo npm -g install sails
     sudo npm install sails-mongo
+    sudo npm install --save machinepack-emailaddresses
+    sudo npm install --save machinepack-passwords
     
 #### Lancement de l'API
     sails lift
