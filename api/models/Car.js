@@ -22,10 +22,16 @@ module.exports = {
     avatar:{
       type: 'string'
     },
+    charge:{
+      type: 'number'
+    },
 
     // One way association
     controls: { 
         model: 'controls'
+    },
+    location:{
+      model: 'location'
     },
 
 

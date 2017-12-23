@@ -11,10 +11,13 @@ module.exports = {
     lock: {
       type: 'boolean' 
     },
+    start: {
+      type: 'boolean' 
+    },
     air_conditioning: {
-      type: 'number'
+      type: 'boolean'
     }
   }
-
+  
 };
 
