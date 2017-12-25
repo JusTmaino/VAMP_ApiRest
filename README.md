@@ -6,24 +6,20 @@ A [Sails](http://sailsjs.org) application
 
 ### Base de données : MongoDB
 
-Lancer une instance de la base : 
+Lancer une instance de la base :
 
     mongod
 
 ### Initialisation du projet
 
 #### Installation des modules
-    
-    sudo npm -g install sails
-    sudo npm install sails-mongo
-    sudo npm install --save machinepack-emailaddresses
-    sudo npm install --save machinepack-passwords
-    
+
+    sudo npm install
+
 #### Lancement de l'API
     sails lift
-    
+
 #### Tests et documentation de l'API
 
 Realisée avec l'api Apiary
 Le lien : https://khadidjahamza.docs.apiary.io/#
-    

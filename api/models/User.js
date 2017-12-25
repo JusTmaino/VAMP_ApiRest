@@ -1,43 +1,38 @@
-/**
- * User.js
- *
- * @description :: TODO: You might write a short summary of how this model works and what it represents here.
- * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
- */
-//npm install sails-hook-validation --save 
-module.exports = {
+var User = {
+  // Enforce model schema in the case of schemaless databases
+  schema: true,
 
   attributes: {
-    username: {
-      type : 'string',
-	  required: true,
-	  unique: true
+
+    username  : {
+      type: 'string',
+      unique: true
     },
-    password: {
-      type : 'string',
-	  required: true
+    email     : {
+      type: 'email',
+      unique: true
     },
+
     firstName: {
       type : 'string',
-	  required: true
+    //required: true
     },
+
     lastName: {
       type : 'string',
-	   required: true
+     //required: true
     },
+
     bDay: {
       type : 'date',
-	  required: true
+    //required: true
     },
-    email: {
-      type : 'email',
-	  required: true,
-	  unique: true
-    },
+
     tel: {
       type : 'string',
-	  required: true
+    //required: true
     },
+
     avatar: {
       type : 'string'
     },
@@ -46,6 +41,7 @@ module.exports = {
     homeAddress: {
       model : 'location'
     },
+
     settings: {
       model : 'settings'
     },
@@ -56,12 +52,12 @@ module.exports = {
       via: 'owners',
       dominant: true
     },
-	toJSON: function (){
-		var obj = this.toObject();
-		delete obj.password;
-		return obj;
-	}
+
+    passports : {
+      collection: 'Passport',
+      via: 'user'
+    }
   }
-  
 };
 
+module.exports = User;
