@@ -22,7 +22,7 @@ Lancer une instance de la base :
 
 ## Tests et documentation de l'API
 
-## Utilisation
+### Utilisation
 
 url de login :
   `http://localhost:1337/auth/local`
@@ -37,7 +37,7 @@ Pour acceder à une resource, ajouter le token à la header de la requête :
   `access_token: <token>`
 
 
-## documentation
+### documentation
 
 Realisée avec l'api Apiary
 Le lien : https://khadidjahamza.docs.apiary.io/#
