@@ -53,6 +53,10 @@ var User = {
       dominant: true
     },
 
+    role: {
+      model : 'role'
+    },
+
     passports : {
       collection: 'Passport',
       via: 'user'

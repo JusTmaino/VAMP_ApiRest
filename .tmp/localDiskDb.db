@@ -1,0 +1,328 @@
+{
+  "data": {
+    "car": [],
+    "controls": [],
+    "location": [],
+    "media": [],
+    "music": [],
+    "passport": [
+      {
+        "protocol": "local",
+        "password": "$2a$10$MhG8ClOLY9VMQoM6rFi0Gud5CjCUka6ESBld7iVhc7I9GiymnTlD2",
+        "user": 2,
+        "accessToken": "SGFtZGlpTW9uIERlYyAyNSAyMDE3IDEyOjQ4OjU4IEdNVCswMTAwIChDRVQp",
+        "createdAt": "2017-12-25T11:48:58.432Z",
+        "updatedAt": "2017-12-25T11:48:58.432Z",
+        "id": 1
+      }
+    ],
+    "playlist": [],
+    "settings": [],
+    "user": [
+      {
+        "username": "Hamdii",
+        "email": "hamdii@gmail.com",
+        "createdAt": "2017-12-25T11:48:58.300Z",
+        "updatedAt": "2017-12-25T11:48:58.300Z",
+        "id": 2
+      }
+    ],
+    "car_owners__user_cars": []
+  },
+  "schema": {
+    "car": {
+      "registerNumber": {
+        "type": "string",
+        "unique": true
+      },
+      "brand": {
+        "type": "string"
+      },
+      "model": {
+        "type": "string"
+      },
+      "avatar": {
+        "type": "string"
+      },
+      "charge": {
+        "type": "string"
+      },
+      "controls": {
+        "type": "integer",
+        "model": "controls",
+        "foreignKey": true,
+        "alias": "controls"
+      },
+      "location": {
+        "type": "integer",
+        "model": "location",
+        "foreignKey": true,
+        "alias": "location"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "controls": {
+      "lock": {
+        "type": "boolean"
+      },
+      "start": {
+        "type": "boolean"
+      },
+      "air_conditioning": {
+        "type": "boolean"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "location": {
+      "longitude": {
+        "type": "string"
+      },
+      "latitude": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "media": {
+      "url": {
+        "type": "string",
+        "unique": true
+      },
+      "playlist": {
+        "type": "integer",
+        "model": "playlist",
+        "foreignKey": true,
+        "alias": "playlist"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "music": {
+      "volume": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "passport": {
+      "protocol": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "provider": {
+        "type": "string"
+      },
+      "identifier": {
+        "type": "string"
+      },
+      "tokens": {
+        "type": "json"
+      },
+      "accessToken": {
+        "type": "string"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "playlist": {
+      "name": {
+        "type": "string"
+      },
+      "music": {
+        "type": "integer",
+        "model": "music",
+        "foreignKey": true,
+        "alias": "music"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "settings": {
+      "air_conditioning": {
+        "type": "string"
+      },
+      "music": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "username": {
+        "type": "string",
+        "unique": true
+      },
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "firstName": {
+        "type": "string"
+      },
+      "lastName": {
+        "type": "string"
+      },
+      "bDay": {
+        "type": "date"
+      },
+      "tel": {
+        "type": "string"
+      },
+      "avatar": {
+        "type": "string"
+      },
+      "homeAddress": {
+        "type": "integer",
+        "model": "location",
+        "foreignKey": true,
+        "alias": "homeAddress"
+      },
+      "settings": {
+        "type": "integer",
+        "model": "settings",
+        "foreignKey": true,
+        "alias": "settings"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "car_owners__user_cars": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "car_owners": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "car",
+        "on": "id",
+        "via": "user_cars"
+      },
+      "user_cars": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "user",
+        "on": "id",
+        "via": "car_owners"
+      }
+    }
+  },
+  "counters": {
+    "car": {},
+    "controls": {},
+    "location": {},
+    "media": {},
+    "music": {},
+    "passport": {
+      "id": 1
+    },
+    "playlist": {},
+    "settings": {},
+    "user": {
+      "id": 2
+    },
+    "car_owners__user_cars": {}
+  }
+}

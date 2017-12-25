@@ -17,9 +17,27 @@ Lancer une instance de la base :
     sudo npm install
 
 #### Lancement de l'API
+
     sails lift
 
-#### Tests et documentation de l'API
+## Tests et documentation de l'API
+
+## Utilisation
+
+url de login :
+  `http://localhost:1337/auth/local`
+
+url de register :
+  `http://localhost:1337/auth/local/register`
+
+Pour acceder à une resource, ajouter le token à la header de la requête :
+  `Authorization: Bearer <token>`
+
+  ou bien au corps de la requête :
+  `access_token: <token>`
+
+
+## documentation
 
 Realisée avec l'api Apiary
 Le lien : https://khadidjahamza.docs.apiary.io/#

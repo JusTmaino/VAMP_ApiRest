@@ -20,19 +20,45 @@ module.exports.policies = {
   // (`true` allows public access)
   '*': ['passport', 'sessionAuth'],
 
-  'flash': {
-    'remoteHome': ['passport', 'bearerAuth']
-  },
-
   'auth': {
     '*': ['passport']
   },
 
   'UserController' : {
-    ' * ': ['passport','bearerAuth']
+    '*': ['passport','bearerAuth']
+  },
+
+  'RoleController' : {
+    '*': ['passport','bearerAuth']
+  },
+
+  'CarController' : {
+    '*': ['passport','bearerAuth']
+  },
+
+  'ControlsController' : {
+    '*': ['passport','bearerAuth']
+  },
+
+  'LocationController' : {
+    '*': ['passport','bearerAuth']
+  },
+
+  'MediaController' : {
+    '*': ['passport','bearerAuth']
+  },
+
+  'MusicController' : {
+    '*': ['passport','bearerAuth']
+  },
+
+  'PlaylistController' : {
+    '*': ['passport','bearerAuth']
+  },
+
+  'SettingsController' : {
+    '*': ['passport','bearerAuth']
   }
-
-
 
 
 	// Here's an example of mapping some policies to run before
